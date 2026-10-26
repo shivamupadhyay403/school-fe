@@ -14,7 +14,7 @@ export default function AppRoutes() {
         <Routes>
           {/* Public-only pages */}
           {/* <Route element={<GuestGuard />}> */}
-          <Route >
+          <Route>
             {PublicRoutes.map(({ name, path, component: Component }) => (
               <Route key={name} path={path} element={<Component />} />
             ))}
