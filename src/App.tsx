@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
 // import AuthGuard from "../src/gaurds/AuthGuard";
-import GuestGuard from '../src/gaurds/GuestGuard';
+import GuestGuard from './gaurds/GuestGuard';
 // import TenantGuard from "../src/gaurds/TenantGaurd";
 // import RoleGuard from "../src/gaurds/RoleGuard";
 // import PermissionGuard from "../src/gaurds/PermissionGuard";
