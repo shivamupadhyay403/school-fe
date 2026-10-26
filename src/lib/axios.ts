@@ -38,7 +38,7 @@ const isAuthEndpoint = (url?: string) =>
 async function refreshSession(): Promise<void> {
   if (!refreshPromise) {
     refreshPromise = refreshClient
-      .post('/api/auth/refresh')
+      .post('/api/auth/v1/refresh')
       .then(() => undefined)
       .finally(() => {
         refreshPromise = null;
@@ -86,7 +86,7 @@ api.interceptors.response.use(
 export async function revokeSession(): Promise<void> {
   if (!logoutPromise) {
     logoutPromise = refreshClient
-      .post('/api/auth/logout')
+      .post('/api/auth/v1/logout')
       .then(() => undefined)
       .finally(() => {
         logoutPromise = null;

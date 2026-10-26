@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
 // import AuthGuard from "../src/gaurds/AuthGuard";
-import GuestGuard from './gaurds/GuestGuard';
+// import GuestGuard from './gaurds/GuestGuard';
 // import TenantGuard from "../src/gaurds/TenantGaurd";
 // import RoleGuard from "../src/gaurds/RoleGuard";
 // import PermissionGuard from "../src/gaurds/PermissionGuard";
@@ -13,7 +13,8 @@ export default function AppRoutes() {
       <Suspense fallback={<Loader />}>
         <Routes>
           {/* Public-only pages */}
-          <Route element={<GuestGuard />}>
+          {/* <Route element={<GuestGuard />}> */}
+          <Route >
             {PublicRoutes.map(({ name, path, component: Component }) => (
               <Route key={name} path={path} element={<Component />} />
             ))}
