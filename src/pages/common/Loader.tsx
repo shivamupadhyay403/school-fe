@@ -6,7 +6,7 @@ type ScreenLoaderProps = {
 };
 
 export default function Loader({
-  message = "Please wait...",
+  message = "Loading...",
 }: ScreenLoaderProps) {
   return (
     <div
